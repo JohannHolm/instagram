@@ -1,0 +1,192 @@
+body {
+  margin: 0;
+  color: white;
+  background-color: black;
+  font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif;
+  margin-top: 5%;
+}
+body h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+body h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.contentbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 800px;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+
+.content-h1 {
+  margin-bottom: 8px;
+}
+
+.imagebox {
+  height: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1px;
+}
+
+.imagebox img {
+  max-height: 99%;
+  max-width: 99%;
+  object-fit: contain;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.side-bar-left {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  padding: 16px;
+  box-shadow: 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+.side-bar-left div:last-child {
+  padding-top: 50vh;
+}
+
+.side-bar-left div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 8px;
+  margin-top: 8px;
+}
+.hover-effect:hover {
+  cursor: pointer;
+  background-color: #8080805e;
+  border-radius: 10px;
+  transition: ease-in-out 5000ms, 0;
+}
+.side-bar-left img,
+.postIcon {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.side-bar-left span {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 50vh;
+  padding-left: 8px;
+}
+
+.postUser {
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.headlineBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headlinemenubox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.menubox {
+  display: flex;
+  align-items: center;
+}
+.menubox:hover {
+  cursor: pointer;
+}
+
+.comment-box {
+  width: 100%;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.caption-box {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.main-icon-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.bookmark-icon {
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+.bookmark-icon:hover {
+  cursor: pointer;
+}
+
+.postIcon:hover {
+  cursor: pointer;
+}
+
+.like-box {
+  width: 100%;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.comment-h3 {
+  font-weight: bold;
+}
+
+.likedPost {
+  background-color: rgb(100, 0, 0);
+}
+
+.inputField {
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 4px;
+  border-width: 0;
+}
+
+input {
+  color: white;
+}
+input:focus {
+  border-width: 0px;
+}
