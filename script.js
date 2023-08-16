@@ -99,6 +99,7 @@ let stories = [
 function generatePosts() {
   for (let i = 0; i < posts.length; i++) {
     const post = posts[i];
+    const commentsjson = posts[i].comments[i];
     //const likes = Math.floor(Math.random() * 100);
     document.getElementById('content').innerHTML += /*html*/ `
     <div class="contentbox">
@@ -110,7 +111,7 @@ function generatePosts() {
     <div class="menubox">...</div>
    </div> 
       <div class="imagebox">${post['image']}</div>
-      <div class="main-icon-box">
+      <div class="box">
     <div class="icon-box">
      <img onclick="checkLike('likeButton${i}', 'likeImage${i}', '${i}')" id="likeImage${i}" class="postIcon" src="/img/icons/notification.png" alt="">
      <img onclick="addComment(${i})" id="comment${i}" class="postIcon" src="/img/icons/speech-bubble.png" alt="">
@@ -122,16 +123,29 @@ function generatePosts() {
     </div>
     <div class="like-box">Gefällt <span id="likeButton${i}">${post['likes']}</span> Mal</div>
     <div class="caption-box"><span class="comment-h3"> ${post['headline']}</span> ${post['captionBox']}</div>
-    <div class="comment-box"><span>${post['comments']}</span></div>
-    <input class="inputField"type="text" placeholder="Kommentieren ...">
-    </div>  
+    <div class="comment-box" id="${i}"></div>
+    `;
+    generateComments(i);
+    //generateCommentBox(i);//
+  }
+}
+
+function generateComments(x) {
+  for (let i = 0; i < posts[x].comments.length; i++) {
+    let comment = posts[x].comments[i];
+    document.getElementById(x).innerHTML += /*html*/ `
+    <span>Guest: ${comment}</span>
     `;
   }
 }
 
-function generateComments() {}
-
-function generateStories() {}
+function generateCommentBox(x) {
+  document.getElementById('contentboxID', x).innerHTML += /*html*/ `
+  <div class="box">
+    <input class="inputField"type="text" placeholder="Kommentieren ...">
+    <button>Kommentieren</button>  
+    </div>`;
+}
 
 function checkLike(x, y, i) {
   //let like = document.getElementById(x).innerHTML;//
@@ -148,3 +162,5 @@ function checkLike(x, y, i) {
 }
 
 function addComment(x) {}
+
+function generateStories() {}
