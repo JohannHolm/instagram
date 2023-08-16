@@ -174,7 +174,8 @@ body h3 {
 }
 
 .likedPost {
-  background-color: rgb(100, 0, 0);
+  background-color: rgb(255, 0, 0);
+  opacity: 50%;
 }
 
 .inputField {

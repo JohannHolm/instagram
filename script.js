@@ -112,7 +112,7 @@ function generatePosts() {
       <div class="imagebox">${post['image']}</div>
       <div class="main-icon-box">
     <div class="icon-box">
-     <img onclick="checkLike('likeButton${i}', 'likeImage${i}')" id="likeImage${i}" class="postIcon" src="/img/icons/notification.png" alt="">
+     <img onclick="checkLike('likeButton${i}', 'likeImage${i}', '${i}')" id="likeImage${i}" class="postIcon" src="/img/icons/notification.png" alt="">
      <img onclick="addComment(${i})" id="comment${i}" class="postIcon" src="/img/icons/speech-bubble.png" alt="">
      <img class="postIcon" src="/img/icons/message.png" alt="">
     </div>
@@ -133,10 +133,11 @@ function generateComments() {}
 
 function generateStories() {}
 
-function checkLike(x, y) {
-  let like = document.getElementById(x).innerHTML;
-  let newLike = parseInt(like) + 1;
-  let noNewLike = parseInt(like) - 1;
+function checkLike(x, y, i) {
+  //let like = document.getElementById(x).innerHTML;//
+  let like = posts[i]['likes'];
+  let newLike = like + 1;
+  let noNewLike = like;
   if (document.getElementById(y).classList.contains('likedPost')) {
     document.getElementById(y).classList.remove('likedPost');
     document.getElementById(x).innerHTML = noNewLike;
