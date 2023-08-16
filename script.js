@@ -126,7 +126,7 @@ function generatePosts() {
     <div class="comment-box" id="${i}"></div>
     `;
     generateComments(i);
-    //generateCommentBox(i);//
+    generateCommentBox(i);
   }
 }
 
@@ -140,7 +140,7 @@ function generateComments(x) {
 }
 
 function generateCommentBox(x) {
-  document.getElementById('contentboxID', x).innerHTML += /*html*/ `
+  document.getElementById(x).innerHTML += /*html*/ `
   <div class="box">
     <input class="inputField"type="text" placeholder="Kommentieren ...">
     <button>Kommentieren</button>  

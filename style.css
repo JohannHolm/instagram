@@ -22,7 +22,7 @@ body h3 {
   flex-direction: column;
   width: 600px;
   min-height: 800px;
-  margin: 64px;
+  margin-top: 64px;
 }
 
 .content-h1 {
