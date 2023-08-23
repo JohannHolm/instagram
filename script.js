@@ -124,9 +124,10 @@ function generatePosts() {
     <div class="like-box">Gefällt <span id="likeButton${i}">${post['likes']}</span> Mal</div>
     <div class="caption-box"><span class="comment-h3"> ${post['headline']}</span> ${post['captionBox']}</div>
     <div class="comment-box" id="${i}"></div>
+    <div></div>
     `;
-    generateComments(i);
     generateCommentBox(i);
+    generateComments(i);
   }
 }
 
@@ -142,7 +143,7 @@ function generateComments(x) {
 function generateCommentBox(x) {
   document.getElementById(x).innerHTML += /*html*/ `
   <div class="box">
-    <input class="inputField"type="text" placeholder="Kommentieren ...">
+    <input id="input${x}" class="inputField" type="text" placeholder="Kommentieren ...">
     <button>Kommentieren</button>  
     </div>`;
 }
@@ -161,6 +162,11 @@ function checkLike(x, y, i) {
   }
 }
 
-function addComment(x) {}
+function addComment(x) {
+  posts[x].comments.push('Emmerich');
+  document.getElementById(x).innerHTML += /*html*/ `
+    <span>Guest: Das wird eine Variable</span>
+    `;
+}
 
 function generateStories() {}

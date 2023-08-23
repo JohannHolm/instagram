@@ -133,6 +133,9 @@ body h3 {
   flex-direction: column;
 }
 
+.comment-box div {
+}
+
 .caption-box {
   width: 100%;
   background: rgba(255, 255, 255, 0.05);
