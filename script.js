@@ -163,7 +163,7 @@ function checkLike(x, y, i) {
 }
 
 function addComment(x) {
-  posts[x].comments.push('Emmerich');
+  //posts[x].comments.push('Emmerich');//
   document.getElementById(x).innerHTML += /*html*/ `
     <span>Guest: Das wird eine Variable</span>
     `;
