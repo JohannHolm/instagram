@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 0px;
   color: white;
   background-color: black;
   font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -58,15 +58,13 @@ body h3 {
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: 0;
-  bottom: 0;
   width: 250px;
   padding: 16px;
   box-shadow: 1px 0px rgba(255, 255, 255, 0.1);
 }
 
 .side-bar-left div:last-child {
-  padding-top: 50vh;
+  padding-top: 40vh;
 }
 
 .side-bar-left div {
@@ -96,7 +94,7 @@ body h3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 50vh;
+  margin-top: 40vh;
   padding-left: 8px;
 }
 
@@ -233,5 +231,23 @@ input:focus {
   flex-direction: column;
 }
 
+.d-none {
+  display: none;
+}
+
 @media only screen and (max-width: 600px) {
+  .hover-effect h3 {
+    display: none;
+  }
+  .side-bar-left {
+    flex-direction: row;
+    width: auto;
+    height: 50px;
+    background: black;
+    position: fixed;
+    bottom: 0px;
+  }
+  .side-bar-left h1 {
+    display: none;
+  }
 }
