@@ -193,3 +193,45 @@ input {
 input:focus {
   border-width: 0px;
 }
+
+#main-storybox {
+  width: 50%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  left: 25%;
+  right: 25%;
+}
+
+.storybox img {
+  height: 64px;
+  width: 64px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    orange,
+    red,
+    purple
+  );
+  padding: 3px;
+}
+.storybox :hover {
+  cursor: pointer;
+}
+
+.storybox {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+}

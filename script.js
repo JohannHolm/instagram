@@ -63,43 +63,36 @@ let posts = [
 
 let stories = [
   {
-    image: '',
-    name: '',
+    image: '<img src="img/stories/story1.jpg" alt="">',
+    name: 'Esel',
   },
   {
-    image: '',
-    name: '',
+    image: '<img src="img/stories/story2.jpg" alt="">',
+    name: 'Eselmann',
   },
   {
-    image: '',
-    name: '',
+    image: '<img src="img/stories/story3.jpg" alt="">',
+    name: 'Donkey',
   },
   {
-    image: '',
-    name: '',
+    image: '<img src="img/stories/story4.jpg" alt="">',
+    name: 'Eselbert',
   },
   {
-    image: '',
-    name: '',
+    image: '<img src="img/stories/story5.jpg" alt="">',
+    name: 'Jungesel',
   },
   {
-    image: '',
-    name: '',
-  },
-  {
-    image: '',
-    name: '',
-  },
-  {
-    image: '',
-    name: '',
+    image: '<img src="img/stories/story6.jpg" alt="">',
+    name: 'Eselbaron',
   },
 ];
 
-function generatePosts() {
+function generateContent() {
+  generateStories();
   for (let i = 0; i < posts.length; i++) {
     const post = posts[i];
-    const commentsjson = posts[i].comments[i];
+
     //const likes = Math.floor(Math.random() * 100);
     document.getElementById('content').innerHTML += /*html*/ `
     <div class="contentbox">
@@ -141,7 +134,6 @@ function generateComments(x) {
 }
 
 function generateCommentBox(y, x) {
-  // x durch ID von DIV nach comment-box ersetzen
   document.getElementById('cmb' + x).innerHTML += /*html*/ `
   <div class="box">
     <input id="input${x}" class="inputField" type="text" placeholder="Kommentieren ...">
@@ -165,7 +157,7 @@ function checkLike(x, y, i) {
 
 function addComment(x, y) {
   let input = document.getElementById(x).value;
-  //posts[x].comments.push('Emmerich');//
+  //posts[x].comments.push(${input});//
   document.getElementById(y).innerHTML += /*html*/ `
     <span>Guest: ${input}</span>
     `;
@@ -176,4 +168,14 @@ function clearInput(x) {
   document.getElementById(x).value = '';
 }
 
-function generateStories() {}
+function generateStories() {
+  for (let i = 0; i < stories.length; i++) {
+    const story = stories[i];
+    document.getElementById('main-storybox').innerHTML += /*html*/ `
+    <div class="storybox">
+     ${story.image}
+    <span>${story.name}</span>
+    </div>
+    `;
+  }
+}
