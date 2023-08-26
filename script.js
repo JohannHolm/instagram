@@ -114,7 +114,7 @@ function generatePosts() {
       <div class="box">
     <div class="icon-box">
      <img onclick="checkLike('likeButton${i}', 'likeImage${i}', '${i}')" id="likeImage${i}" class="postIcon" src="/img/icons/notification.png" alt="">
-     <img onclick="addComment(${i})" id="comment${i}" class="postIcon" src="/img/icons/speech-bubble.png" alt="">
+     <img id="comment${i}" class="postIcon" src="/img/icons/speech-bubble.png" alt="">
      <img class="postIcon" src="/img/icons/message.png" alt="">
     </div>
     <div>
@@ -124,9 +124,9 @@ function generatePosts() {
     <div class="like-box">Gefällt <span id="likeButton${i}">${post['likes']}</span> Mal</div>
     <div class="caption-box"><span class="comment-h3"> ${post['headline']}</span> ${post['captionBox']}</div>
     <div class="comment-box" id="${i}"></div>
-    <div></div>
+    <div class="cmb-box" id="cmb${i}"></div>
     `;
-    generateCommentBox(i);
+    generateCommentBox('cmb', i);
     generateComments(i);
   }
 }
@@ -140,11 +140,12 @@ function generateComments(x) {
   }
 }
 
-function generateCommentBox(x) {
-  document.getElementById(x).innerHTML += /*html*/ `
+function generateCommentBox(y, x) {
+  // x durch ID von DIV nach comment-box ersetzen
+  document.getElementById('cmb' + x).innerHTML += /*html*/ `
   <div class="box">
     <input id="input${x}" class="inputField" type="text" placeholder="Kommentieren ...">
-    <button>Kommentieren</button>  
+    <button onclick="addComment('input'+ ${x}, ${x})">Kommentieren</button>  
     </div>`;
 }
 
@@ -162,10 +163,11 @@ function checkLike(x, y, i) {
   }
 }
 
-function addComment(x) {
+function addComment(x, y) {
+  let input = document.getElementById(x).value;
   //posts[x].comments.push('Emmerich');//
-  document.getElementById(x).innerHTML += /*html*/ `
-    <span>Guest: Das wird eine Variable</span>
+  document.getElementById(y).innerHTML += /*html*/ `
+    <span>${input}</span>
     `;
 }
 
