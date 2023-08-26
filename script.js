@@ -167,8 +167,13 @@ function addComment(x, y) {
   let input = document.getElementById(x).value;
   //posts[x].comments.push('Emmerich');//
   document.getElementById(y).innerHTML += /*html*/ `
-    <span>${input}</span>
+    <span>Guest: ${input}</span>
     `;
+  clearInput(x);
+}
+
+function clearInput(x) {
+  document.getElementById(x).value = '';
 }
 
 function generateStories() {}
