@@ -94,7 +94,7 @@ body h3 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 40vh;
+  margin-top: 0vh;
   padding-left: 8px;
 }
 
@@ -241,13 +241,37 @@ input:focus {
   }
   .side-bar-left {
     flex-direction: row;
-    width: auto;
-    height: 50px;
+    width: 100%;
     background: black;
     position: fixed;
     bottom: 0px;
+    padding: 0;
+    padding-bottom: 8px;
   }
   .side-bar-left h1 {
     display: none;
+  }
+
+  .side-bar-left :last-child {
+    display: none;
+  }
+
+  .contentbox {
+    width: 90%;
+  }
+  #main-storybox {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+  }
+  .storybox img {
+    height: 48px;
+    width: 48px;
+  }
+  .storybox span {
+    font-size: 12px;
   }
 }
