@@ -106,12 +106,12 @@ function generateContent() {
       <div class="imagebox">${post['image']}</div>
       <div class="box">
     <div class="icon-box">
-     <img onclick="checkLike('likeButton${i}', 'likeImage${i}', '${i}')" id="likeImage${i}" class="postIcon" src="/img/icons/notification.png" alt="">
-     <img id="comment${i}" class="postIcon" src="/img/icons/speech-bubble.png" alt="">
-     <img class="postIcon" src="/img/icons/message.png" alt="">
+     <img onclick="checkLike('likeButton${i}', 'likeImage${i}', '${i}')" id="likeImage${i}" class="postIcon" src="img/icons/notification.png" alt="">
+     <img id="comment${i}" class="postIcon" src="img/icons/speech-bubble.png" alt="">
+     <img class="postIcon" src="img/icons/message.png" alt="">
     </div>
     <div>
-    <img class="bookmark-icon" src="/img/icons/bookmark.png" alt="">
+    <img class="bookmark-icon" src="img/icons/bookmark.png" alt="">
     </div>
     </div>
     <div class="like-box">Gefällt <span id="likeButton${i}">${post['likes']}</span> Mal</div>
